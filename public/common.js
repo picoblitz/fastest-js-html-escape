@@ -163,6 +163,15 @@ const FNS = (() => {
       .replaceAll('"', '&quot;');
   };
 
+  // html escape (replace global regex)
+  const h9 = (v) => {
+    return v.replace(/\&/g, '&amp;')
+      .replace(/\</g, '&lt;')
+      .replace(/\>/g, '&gt;')
+      .replace(/\'/g, '&apos;')
+      .replace(/\"/g, '&quot;');
+  };
+
 //   // html escape (dom-based)
 //   // note: textContent rather than innerText; the latter does not
 //   // handle newlines correctly
@@ -233,6 +242,12 @@ const FNS = (() => {
     name: "h9: Replace All Literal",
     text: `
       HTML escape series of literal replaceAll()s.
+    `,
+  }, {
+    id: 'h10',
+    name: "h10: Replace Global RegExp",
+    text: `
+      HTML escape series of literal replaces by global regex.
     `,
   }];
 
@@ -322,6 +337,7 @@ const FNS = (() => {
     h7: h7,
     h8: h8,
     h9: h9,
+    h10: h10,
     // hd: hd,
     h: h6,
 
