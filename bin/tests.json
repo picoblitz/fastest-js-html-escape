@@ -47,5 +47,10 @@
   "h9": {
     "name": "h9: Replace All Literal",
     "fmt": "m,--"
+  },
+
+  "h10": {
+    "name": "h10: Replace Global RegExp",
+    "fmt": "m,--"
   }
 }
