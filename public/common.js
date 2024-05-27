@@ -164,7 +164,7 @@ const FNS = (() => {
   };
 
   // html escape (replace global regex)
-  const h9 = (v) => {
+  const h10 = (v) => {
     return v.replace(/\&/g, '&amp;')
       .replace(/\</g, '&lt;')
       .replace(/\>/g, '&gt;')
